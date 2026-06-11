@@ -1,0 +1,130 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('/assents/imagenes/fondo.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.65);
+    z-index: -1;
+}
+
+/* Imagen principal */
+.gallery-card {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery-card img {
+    width: 105%;
+    height: 400px;
+    object-position: center center;
+}
+
+.gallery-card .caption {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    padding: 1rem 1.5rem;
+    background: linear-gradient(transparent, rgba(0,0,0,0.6));
+    color: white;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.descripcion {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+/* Sección de grados */
+.grados {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.grado-titulo {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 0.8rem;
+    color: #333;
+    text-align: center;
+}
+
+.grado-links {
+    display: flex;
+    gap: 10.5rem;
+    justify-content: center;
+}
+
+/* Panel clicable */
+.panel-materia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 12px;
+    overflow: hidden;
+    width: 200px;
+    background: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.panel-materia:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+}
+
+.panel-materia img {
+    width: 100%;
+    height: 110px;
+    object-fit: cover;
+}
+
+.panel-materia span {
+    padding: 1.7rem;
+    font-size: 0.98rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Footer */
+.footer {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+    padding: 2rem 1rem;
+    margin-top: 3rem;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    box-shadow: 0 -4px 12px rgba(0,0,0,0.2);
+}
+
+.footer p {
+    margin: 0.4rem 0;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+}
+
+.footer p:hover {
+    opacity: 0.8;
+    transition: 0.3s;
+}
