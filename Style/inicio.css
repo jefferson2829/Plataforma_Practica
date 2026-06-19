@@ -1,4 +1,3 @@
-/* Reset básico */
 * {
     margin: 0;
     padding: 0;
@@ -22,7 +21,6 @@ body::before {
     z-index: -1;
 }
 
-/* Imagen principal */
 .gallery-card {
     width: 100%;
     position: relative;
@@ -53,7 +51,6 @@ body::before {
     padding: 2rem;
 }
 
-/* Sección de grados */
 .grados {
     padding: 2rem;
     display: flex;
@@ -75,7 +72,6 @@ body::before {
     justify-content: center;
 }
 
-/* Panel clicable */
 .panel-materia {
     display: flex;
     flex-direction: column;
@@ -107,7 +103,6 @@ body::before {
     color: #333;
 }
 
-/* Footer */
 .footer {
     background: linear-gradient(135deg, #1e3c72, #2a5298);
     color: white;
@@ -127,4 +122,57 @@ body::before {
 .footer p:hover {
     opacity: 0.8;
     transition: 0.3s;
+}
+
+/*Tablets (768px o menos)*/
+@media (max-width: 768px) {
+
+    .gallery-card img {
+        height: 250px;
+    }
+
+    .grado-links {
+        gap: 2rem;
+        justify-content: center;
+    }
+
+    .panel-materia {
+        width: 160px;
+    }
+}
+
+/* Celulares (480px o menos)*/
+@media (max-width: 480px) {
+
+    .gallery-card img {
+        height: 180px;
+    }
+
+    .gallery-card .caption {
+        font-size: 1.2rem;
+    }
+
+    .descripcion {
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+
+    .grados {
+        padding: 1rem;
+    }
+
+    .grado-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .panel-materia {
+        width: 90%;
+    }
+
+    .footer {
+        font-size: 0.85rem;
+        padding: 1.5rem 1rem;
+    }
 }
