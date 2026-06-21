@@ -5,12 +5,13 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-image: url('/assents/imagenes/fondo.png');
+    font-family: 'Nunito', Arial, sans-serif;
+    /*background-image: url('/assents/imagenes/fondo.png');*/
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
+    color: #333;
 }
 
 body::before {
@@ -21,6 +22,7 @@ body::before {
     z-index: -1;
 }
 
+/* ===== Imagen principal / banner ===== */
 .gallery-card {
     width: 100%;
     position: relative;
@@ -28,9 +30,11 @@ body::before {
 }
 
 .gallery-card img {
-    width: 105%;
-    height: 400px;
-    object-position: center center;
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    object-position: center 55%;
+    display: block;
 }
 
 .gallery-card .caption {
@@ -40,17 +44,25 @@ body::before {
     background: linear-gradient(transparent, rgba(0,0,0,0.6));
     color: white;
     font-size: 1.8rem;
-    font-weight: bold;
+    font-weight: 800;
+    letter-spacing: 0.3px;
 }
 
+/* ===== Descripción ===== */
 .descripcion {
     display: flex;
     text-align: center;
     flex-direction: column;
     align-items: center;
     padding: 2rem;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #444;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
+/* ===== Sección de grados ===== */
 .grados {
     padding: 2rem;
     display: flex;
@@ -59,10 +71,11 @@ body::before {
 }
 
 .grado-titulo {
-    font-size: 1.3rem;
-    font-weight: bold;
+    font-size: 1.4rem;
+    font-weight: 800;
     margin-bottom: 0.8rem;
-    color: #333;
+    color: #5b2a86;
+    letter-spacing: 0.3px;
     text-align: center;
 }
 
@@ -98,11 +111,12 @@ body::before {
 
 .panel-materia span {
     padding: 1.7rem;
-    font-size: 0.98rem;
-    font-weight: bold;
+    font-size: 1rem;
+    font-weight: 700;
     color: #333;
 }
 
+/* ===== Footer ===== */
 .footer {
     background: linear-gradient(135deg, #1e3c72, #2a5298);
     color: white;
@@ -124,11 +138,12 @@ body::before {
     transition: 0.3s;
 }
 
-/*Tablets (768px o menos)*/
+/* ===== Tablets (768px o menos) ===== */
 @media (max-width: 768px) {
 
     .gallery-card img {
-        height: 250px;
+        height: 300px;
+        object-position: center 50%;
     }
 
     .grado-links {
@@ -141,11 +156,12 @@ body::before {
     }
 }
 
-/* Celulares (480px o menos)*/
+/* ===== Celulares (480px o menos) ===== */
 @media (max-width: 480px) {
 
     .gallery-card img {
-        height: 180px;
+        height: 220px;
+        object-position: center 50%;
     }
 
     .gallery-card .caption {
